@@ -19,9 +19,6 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "usart.h"
-#include "dma.h"
-#include "gpio.h"
-#include "vofa.h"
 
 /* USER CODE BEGIN 0 */
 uint16_t USART1_RXbuff; /* 定义1个接收数据的变量 */

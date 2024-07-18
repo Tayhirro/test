@@ -19,7 +19,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "tim.h"
-#include "usart.h"
+
 /* USER CODE BEGIN 0 */
 
 /* USER CODE END 0 */
@@ -334,14 +334,14 @@ void HAL_TIM_Base_MspDeInit(TIM_HandleTypeDef* tim_baseHandle)
 }
 
 /* USER CODE BEGIN 1 */
-/* 定时器溢出中断回调函数 */
-void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {   //TIM2频率为10Hz，即每100ms进入一次中断
-    static uint16_t TIM2_Counter = 0; // 定义一个静态变量，用于计数   
-    if (htim->Instance == TIM2) { // 检查是否为 TIM2 的中断
+/* 定时器溢出中断回调函�? */
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {   //TIM2频率�?10Hz，即�?100ms进入�?次中�?
+    static uint16_t TIM2_Counter = 0; // 定义�?个静态变量，用于计数   
+    if (htim->Instance == TIM2) { // �?查是否为 TIM2 的中�?
         TIM2_Counter++; // 计数加一
-        if(TIM2_Counter == 2) { // 如果计数到 100
+        if(TIM2_Counter == 2) { // 如果计数�? 100
             TIM2_Counter = 0; // 计数清零
-            JustFloat(); // 调用 JustFloat 函数发送数据
+            JustFloat(); // 调用 JustFloat 函数发�?�数�?
         }
     }
 }

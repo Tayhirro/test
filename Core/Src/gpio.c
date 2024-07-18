@@ -20,7 +20,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "gpio.h"
-#include "steer.h"
+
 /* USER CODE BEGIN 0 */
 
 /* USER CODE END 0 */
@@ -69,7 +69,7 @@ void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 2 */
-void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)     //复位的回调函数
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)     //复位的回调函�?
 {
   if(GPIO_Pin == GPIO_PIN_7)
   {
