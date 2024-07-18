@@ -76,6 +76,9 @@ int main(void)
 {
   /* USER CODE BEGIN 1 */
 
+
+
+
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -102,12 +105,12 @@ int main(void)
   MX_USART1_UART_Init();
   MX_USART2_UART_Init();
   MX_TIM2_Init();
-  MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
-  HAL_TIM_Base_Start(&htim1);
-  
 
-  HAL_UART_Receive_IT(&huart1, (uint8_t *)&USART1_RXbuff, 1); /* �??启接收中�?? */
+
+  HAL_TIM_Base_Start(&htim1);
+  HAL_TIM_Base_Start_IT(&htim2);
+  HAL_UART_Receive_IT(&huart1, (uint8_t *)&USART1_RXbuff, 1); //uart1???openmv
 
 
   /* USER CODE END 2 */
@@ -116,15 +119,10 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    //uart2????dma?vofa???
-    JustFloat();
-    HAL_Delay(1000);  // ????????
    
-   
-   
-    /* USER CODE END WHILE */
-
-    /* USER CODE BEGIN 3 */
+  /* USER CODE END WHILE */
+  }
+  /* USER CODE BEGIN 3 */
   
   /* USER CODE END 3 */
 }
@@ -176,6 +174,11 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
+
+
+
+
+
 
 /* USER CODE END 4 */
 
