@@ -19,6 +19,9 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "usart.h"
+#include "dma.h"
+#include "gpio.h"
+#include "vofa.h"
 
 /* USER CODE BEGIN 0 */
 uint16_t USART1_RXbuff; /* 定义1个接收数据的变量 */
@@ -290,18 +293,13 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
 /* USER CODE BEGIN 1 */
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
-  if(huart->Instance == USART1) // 确保是USART1的中�?
+  if(huart->Instance == USART1) //???????1?????
   {
-    // 假设USART1_RXbuff是您定义的接收缓冲区变量
-    uint16_t tempt = USART1_RXbuff; // 直接使用uint16_t类型
-    Openmv_Receive_Data(tempt); // 调用数据接收处理函数
+    
+    uint16_t tempt = USART1_RXbuff; //
+    Openmv_Receive_Data(tempt); //
     HAL_UART_Receive_IT(huart, (uint8_t *)&USART1_RXbuff, 1);
-  }	
-
-
-
-
-  
+  }
 }
 
 

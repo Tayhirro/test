@@ -1,14 +1,6 @@
 #include "vofa.h"
 
 
-/*定义共同体变量类型*/
-typedef union
-{
-    float Fdata;         //以浮点数形式读取变量
-    uint32_t Adata;      //以32位无符号形式读取变量
-    
-}Vofa_Type;
-
 
 
 
@@ -38,8 +30,6 @@ void Float_to_Byte(float Fdata,  uint8_t *ArrayByte)
   */
 void JustFloat(void)
 {
-
-
     uint8_t Byte[4];                               //定义保存浮点数转换后的数组变量
     uint8_t Tail[4] = {0x00, 0x00, 0x80, 0x7f};    //定义包尾数组
     Byte[0]=0x00;Byte[1]=0x00;Byte[2]=0x00;Byte[3]=0x00; //初始化数组
@@ -48,6 +38,8 @@ void JustFloat(void)
     Byte[1]=CyErr;
     Byte[2]=0x00;
     Byte[3]=0x00;
+
+
 
     Serial_SendArray(Byte, 4);                     //发送数组
     Serial_SendArray(Tail, 4);                     //发送包尾 

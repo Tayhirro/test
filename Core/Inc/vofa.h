@@ -1,8 +1,7 @@
-#ifndef __VOFA_H
-#define __VOFA_H
+#ifndef __VOFA_H__
+#define __VOFA_H__
 
 #include "headfile.h"
-
 
 
 /*定义共同体变量类型*/

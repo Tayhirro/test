@@ -19,7 +19,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "tim.h"
-
+#include "usart.h"
 /* USER CODE BEGIN 0 */
 
 /* USER CODE END 0 */

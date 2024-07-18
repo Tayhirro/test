@@ -1,4 +1,5 @@
 sss/tim_1.o: ..\Core\Src\tim.c ..\Core\Inc\tim.h ..\Core\Inc\main.h \
+  ..\Core\Inc\headfile.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h \
   ..\Core\Inc\stm32f4xx_hal_conf.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h \
@@ -22,4 +23,7 @@ sss/tim_1.o: ..\Core\Src\tim.c ..\Core\Inc\tim.h ..\Core\Inc\main.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr_ex.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h \
+  ..\Core\Inc\openmv.h ..\Core\Inc\usart.h ..\Core\Inc\dma.h \
+  ..\Core\Inc\gpio.h ..\Core\Inc\vofa.h ..\Core\Inc\steer.h \
+  ..\Core\Inc\pid.h

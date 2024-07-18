@@ -3,21 +3,16 @@
 
 
 /* Includes ------------------------------------------------------------------*/
-#include "stm32f4xx_hal_conf.h"
 #include "stm32f4xx_hal.h"
-
 /* USER CODE BEGIN Includes */
 #include "openmv.h"
 #include "usart.h"
 #include "dma.h"
 #include "tim.h"
 #include "gpio.h"
-#include "main.h"
 #include "vofa.h"
 #include "steer.h"
 #include "pid.h"
-
-
 #include "stdio.h"
 
 
